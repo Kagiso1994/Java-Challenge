@@ -55,7 +55,7 @@ public class Main {
      */
     private static Map<String, Integer> addReportResults(Map<String, Integer> source, Map<String, Integer> target) {
         Date dt = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("hh: mm: ss");
+        //SimpleDateFormat sdf = new SimpleDateFormat("hh: mm: ss");
         for (Map.Entry<String, Integer> entry : source.entrySet()) {
             if (target.containsKey(entry.getKey())) {
                 target.put(entry.getKey(), entry.getValue() + target.get(entry.getKey()));
@@ -63,7 +63,7 @@ public class Main {
                 target.put(entry.getKey(), entry.getValue());
             }
         }
-        System.out.println(Thread.currentThread().getName() + " (End)" + " at time: " + sdf.format(dt));//prints thread name 
+        //System.out.println(Thread.currentThread().getName() + " (End)" + " at time: " + sdf.format(dt));//prints thread name 
         return target;
     }
 
